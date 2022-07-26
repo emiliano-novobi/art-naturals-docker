@@ -1,5 +1,5 @@
 # Dev Environment
-You can you either Docker or a Local Setup
+You can you either **Docker** or a **Local Setup**.
 
 ## Docker
 ```code
@@ -21,7 +21,9 @@ docker start art-naturals-db
 
 
 ### Python
-Install PyEnv https://github.com/pyenv/pyenv
+Python 3.8 works OK.
+
+You can install Python using [PyEnv](https://github.com/pyenv/pyenv):
 
 ```code
 pyenv install 3.8.0
@@ -53,11 +55,20 @@ npm install -g less
 ```
 
 ### Odoo
+Point to your local project directory in ```config/odoo-local.conf```:
+
+For example, if the local project directory is ```/mnt/data/code/novobi/art-naturals-docker```:
+```
+addons_path=/mnt/data/code/novobi/art-naturals-docker/odoo/addons,/mnt/data/code/novobi/art-naturals-docker/enterprise,/mnt/data/code/novobi/art-naturals-docker/customized_addons
+```
+
+Then run Odoo:
+
 ```code
 odoo/odoo-bin -c config/odoo-local.conf 
 ```
 
-Restore the DB provided by Tan, then restart Odoo with -d art-naturals parameter:
+Restore the Odoo DB provided by your teammates, then restart Odoo with the ```-d art-naturals``` parameter:
 
 ```code
 odoo/odoo-bin -c config/odoo-local.conf -d art-naturals
