@@ -1,10 +1,13 @@
 boto3
 cryptography
 dataclasses
+dicttoxml
 easypost
 numpy
 pandas
 pandas_schema
+paramiko
 pyyaml
-zeep
 urllib3==1.26.7
+xmltodict
+zeep

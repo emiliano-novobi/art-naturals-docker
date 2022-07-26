@@ -2,7 +2,11 @@
 You can you either **Docker** or a **Local Setup**.
 
 ## Art Naturals repo
-```git clone git@github.com:novobi1/ArtNaturals-Odoo.git customized_addons```
+```
+git clone git@github.com:novobi1/ArtNaturals-Odoo.git customized_addons
+cd customized_addons                                                                                                                                   master ✱
+git checkout features/edi_sps_integration
+```
 
 ## Docker
 ```code
