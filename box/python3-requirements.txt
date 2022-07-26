@@ -1,4 +1,10 @@
 boto3
+cryptography
+dataclasses
+easypost
+numpy
+pandas
+pandas_schema
+pyyaml
 zeep
 urllib3==1.26.7
-

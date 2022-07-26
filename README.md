@@ -1,6 +1,9 @@
 # Dev Environment
 You can you either **Docker** or a **Local Setup**.
 
+## Art Naturals repo
+```git clone git@github.com:novobi1/ArtNaturals-Odoo.git customized_addons```
+
 ## Docker
 ```code
 docker-compose up --build
