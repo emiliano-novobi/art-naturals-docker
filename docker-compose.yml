@@ -1,0 +1,29 @@
+services:
+  odoo:
+    build: ./box
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - .:/opt/odoo
+      - odoo_data:/root/.local/share/Odoo
+    command: bash -c "$${PYTHON_PATH} $${START_ODOO} $${ODOO_PARAM} && tail -f /dev/null"
+    environment:
+      PYTHON_PATH: "/usr/local/bin/python3"
+      START_ODOO: "/opt/odoo/odoo/odoo-bin -c /opt/odoo/config/odoo-docker.conf"
+      ODOO_PARAM: ""
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+
+volumes:
+  odoo_data:
+  postgres_data:

@@ -1,0 +1,6 @@
+[submodule "odoo"]
+	path = odoo
+	url = git@github.com:odoo/odoo.git
+[submodule "enterprise"]
+	path = enterprise
+	url = git@github-novobi:novobi1/enterprise.git

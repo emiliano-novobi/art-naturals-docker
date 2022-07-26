@@ -1,0 +1,4 @@
+boto3
+zeep
+urllib3==1.26.7
+
