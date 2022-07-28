@@ -1,6 +1,4 @@
 # Dev Environment
-You can you either **Docker** or a **Local Setup**.
-
 ## Art Naturals repo
 ```
 git clone git@github.com:novobi1/ArtNaturals-Odoo.git customized_addons
@@ -8,12 +6,15 @@ cd customized_addons                                                            
 git checkout features/edi_sps_integration
 ```
 
-## Docker
+## Run Odoo
+You can run Odoo either in **Docker** or in a **Local Setup**.
+
+## Run in Docker
 ```code
 docker-compose up --build
 ```
 
-## Local Setup
+## Run in Local Setup
 
 ### PostgreSQL
 ```code
