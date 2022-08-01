@@ -35,3 +35,6 @@ init_test_db:
 	docker exec -t $(DB_CONTAINER) psql -U odoo -d postgres -c "CREATE DATABASE db_test"
 	docker start $(ODOO_CONTAINER)
 	docker exec -t $(ODOO_CONTAINER) $(ODOO_BIN) -i all -d db_test --stop-after-init
+
+install_test_module:
+	docker exec -t $(ODOO_CONTAINER) $(ODOO_BIN) -i $(module) -d db_test --stop-after-init
