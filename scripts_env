@@ -1,0 +1,5 @@
+export PGPASSWORD=odoo
+export ODOO_CONTAINER=art-naturals-docker-odoo-1
+export DB_CONTAINER=art-naturals-docker-db-1
+export ODOO_BIN="/opt/odoo/odoo/odoo-bin -c /opt/odoo/config/odoo-docker.conf"
+export CUSTOM_ADDONS_DIRECTORY=/opt/odoo/customized_addons
